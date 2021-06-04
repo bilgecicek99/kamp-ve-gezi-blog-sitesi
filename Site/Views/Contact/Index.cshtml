@@ -1,0 +1,148 @@
+﻿@using Site.Models.Siniflar
+@model List<iletisim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>MyResume Bootstrap Template - Index</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="~/webBrandon/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/webBrandon/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="~/webBrandon/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/webBrandon/assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="~/webBrandon/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/webBrandon/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/webBrandon/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+    <header id="header" class="d-flex flex-column justify-content-center"></header>
+    <section id="hero" class="d-flex flex-column justify-content-center">
+        <div class="container" data-aos="zoom-in" data-aos-delay="100">
+            <h1>Ömer Dinç</h1>
+            <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
+            <div class="social-links">
+                <a href="https://twitter.com/merDin35477512" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.facebook.com/omer.dinc.92351995" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/odnc75/?hl=tr" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/ömer-dinç-7a85541b3/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <main id="main">
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>İletişim</h2>
+                </div>
+
+                <div class="row mt-1">
+
+                    <div class="col-lg-4">
+                        <div class="info">
+
+                            <div class="about">
+                                <i class="icofont-royal"></i>
+                                <h4>ÖMER DİNÇ</h4>
+                                <h4>Bilgisayar Mühendisi</h4>
+                                <br /><br />
+                            </div>
+
+                            <div class="address">
+                                <i class="icofont-google-map"></i>
+                                <h4>Adres:</h4>
+                                <p>Konya/Türkiye</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="icofont-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>odnc75@hotmail.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="icofont-phone"></i>
+                                <h4>Telefon:</h4>
+                                <p>0531 825 36 99</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3005.794025544161!2d42.69992771541739!3d41.11718927928975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40682f1b5a1670b5%3A0x2a35eb6d1d3e61be!2sArdahan%20Kalesi!5e0!3m2!1str!2str!4v1595514960018!5m2!1str!2str" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+
+                    @*@Html.Action("Gonder","Contact")*@
+
+                    @*<div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="form-row">
+                    <div class="col-md-6 form-group">
+                        <input type="text" name="AdSoyad" class="form-control" id="name" placeholder="İsim" data-rule="minlen:4" data-msg="!!!" />
+                        <div class="validate"></div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input type="email" class="form-control" name="Mail" id="email" placeholder="Email" data-rule="email" data-msg="!!!" />
+                        <div class="validate"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="Konu" id="subject" placeholder="Konu" data-rule="minlen:4" data-msg="!!!" />
+                    <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="Mesaj" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mesaj"></textarea>
+                    <div class="validate"></div>
+                </div>
+                <div class="mb-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Mesajınız gönderildi.Teşekkür ederim!</div>
+                </div>
+                <div class="text-center"><button type="submit">Gönder</button></div>
+            </form>
+
+        </div>*@
+
+                </div>
+
+            </div>
+        </section>
+    </main>  
+
+    <script src="~/webBrandon/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="~/webBrandon/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/webBrandon/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="~/webBrandon/assets/vendor/php-email-form/validate.js"></script>
+    <script src="~/webBrandon/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="~/webBrandon/assets/vendor/counterup/counterup.min.js"></script>
+    <script src="~/webBrandon/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/webBrandon/assets/vendor/venobox/venobox.min.js"></script>
+    <script src="~/webBrandon/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="~/webBrandon/assets/vendor/typed.js/typed.min.js"></script>
+    <script src="~/webBrandon/assets/vendor/aos/aos.js"></script>   
+    <script src="~/webBrandon/assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
